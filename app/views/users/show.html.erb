@@ -5,8 +5,16 @@
   <%= @user.pseudo %>
 </h1>
 
+<h2>Post a tweet:</h2>
+<%= form_with(model: @tweet, local: true) do |form| %>
+  <p>
+    <%= form.label :Tweet %><br>
+    <%= form.text_area :body %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
 <%= link_to 'Edit profile', edit_user_path(@user) %> |
 <%= link_to 'Logout', users_path %>
-<p>
-  <%= link_to 'New tweets', new_tweet_path(@user) %>
-</p>

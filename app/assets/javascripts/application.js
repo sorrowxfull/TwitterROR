@@ -10,6 +10,10 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+// UJS sert a fair des requettes et des etats simples
+//
+// Turbolinks sert a : (pas trop intrusif et reduis le temps de chargement) dans la page il change le body si ceulement lui change (read me sur github) : turbolinks:load est l'event qui dit que la page est charger
+//
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks

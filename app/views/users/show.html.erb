@@ -1,12 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h1>
-  <strong>Pseudo:</strong>
-  <%= @user.pseudo %>
-</h1>
+<div class="container">
 
-<%= link_to 'Edit profile', edit_user_path(@user) %> |
-<%= link_to 'Logout', users_path %>
-<p>
-  <%= link_to 'New tweets', new_tweet_path(@user) %>
-</p>
+  <h1>
+    Utilisateur : <%= @user.pseudo %>
+  </h1>
+
+  <button class="button button-outline"><%= link_to 'Editer le profile', edit_user_path(@user) %></button>
+  <button class="button button-outline"><%= link_to 'Deconnexion', users_path %> </button>
+
+  <div class="row">
+    <h3><button class="button button-outline"><%= link_to 'Crée un tweet', new_tweet_path(@user) %></button> </h3>
+  </div>
+</div>

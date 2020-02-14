@@ -1,27 +1,32 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Users</h1>
+<div class="container">
 
-<table>
-  <thead>
-    <tr>
-      <th>Pseudo</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <div class="row">
+    <h1>PROJET TWITTER LIGHT ROR </h1>
+  </div>
+  
 
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.pseudo %></td>
-        <td><%= link_to 'Connexion', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Delete', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <div class="row">
+    <h2>Liste des utilisateurs</h2>
+  </div>
 
-<br>
+  <div class="row">
+    <h3> <button class="button button-outline"> <%= link_to 'Crée un Utilisateur', new_user_path %> </button> </h3>
+  </div>
+  
+  <% @users.each do |user| %>
+    <div class="row">
+        <div class="column"> <td><%= image_tag "test.png", width: 64, height: 64 %> </td> </div>
+        <div class="column"> <td><%= user.pseudo %><td></div>
+        <div class="column"> <button class="button button-outline"> <%= link_to 'Connexion', user %> </button> </div>
+        <div class="column"> <button class="button button-outline"> <%= link_to 'Editer', edit_user_path(user) %> </button> </div>
+        <div class="column"> <button class="button button-outline"> <%= link_to 'Supprimer', user, method: :delete, data: { confirm: 'êtes-vous sûr ?' } %> </button> </div>
+    </div>
+  <% end %>
 
-<%= link_to 'New User', new_user_path %>
+  <div class="row">
+    <h4>Site crée par Paul REBOUL et Antoine FRITSCH</h4>
+  </div>
+
+</div>

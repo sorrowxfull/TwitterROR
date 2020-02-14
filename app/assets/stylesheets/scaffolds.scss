@@ -1,12 +1,78 @@
-body {
-  background-color: #fff;
-  color: #333;
-  margin: 33px;
-  font-family: verdana, arial, helvetica, sans-serif;
+html{
+  color:white;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%; /* largeur obligatoire pour être centré */
+  background: white;
+  background-color: white;
+
+}
+
+:root{
+  --highlight-color: #00eeff;
+  --button-color: #00eeff;
+}
+
+head{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+body{
+  background-color: white;
+  color : white;
+  text-align: center;
+  margin-left: 30%;
+  margin-right: 30%;
+  border-right-width: 50px;
+  border-left-width: 50px;
+  width:50%;
+}
+
+h1 {
+  color: rgb(187, 88, 187);
+  /*margin: 33px;*/
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
 
+h2 {
+  font-family: helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 13px;
+}
+
+h3 {
+  font-family: helvetica, sans-serif;
+  font-size: 8px;
+  line-height: 8px;
+}
+
+h4 {
+  color: black;
+  font-family: helvetica, sans-serif;
+  font-size: 4px;
+  line-height: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.button-outline{
+  color:black;
+  background-color: black
+}
+
+.button{
+  color: #00eeff; 
+  background-color: #00eeff;
+}
+/*
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -45,7 +111,7 @@ div {
     margin-bottom: 10px;
   }
 }
-
+*/
 #notice {
   color: green;
 }

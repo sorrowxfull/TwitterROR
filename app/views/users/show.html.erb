@@ -6,10 +6,10 @@
 </h1>
 
 <h2>Post a tweet:</h2>
-<%= form_with(model: @tweet, local: true) do |form| %>
+<%= form_with(model: [ @user, @user.tweets.build ], local: true) do |form| %>
   <p>
     <%= form.label :Tweet %><br>
-    <%= form.text_area :body %>
+    <%= form.text_area :text %>
   </p>
   <p>
     <%= form.submit %>

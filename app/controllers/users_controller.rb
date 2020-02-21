@@ -9,8 +9,10 @@ class UsersController < ApplicationController
 
   # GET /users/1
   # GET /users/1.json
+  
   def show
     @user = User.find(params[:id])
+    @tweets = @user.tweets.all
   end
   def current_user
     @current_user = User.find(params[:id])

@@ -26,21 +26,7 @@ class TweetsController < ApplicationController
   def create
     @user = User.find(params[:user_id])
     @tweet = @user.tweets.create(tweet_params)
-    if @tweet.save
-      redirect_to @user
-    else
-      render 'new'
-    end
-  #  redirect_to user_path(@user)
-  #    respond_to do |format|
-  #    if @tweet.save
-  #      format.html { redirect_to @user, notice: 'Tweet was successfully created.' }
-  #      format.json { render :show, status: :created, location: @user and return }
-  #    else
-  #      format.html { render :new }
-  #      format.json { render json: @tweet.errors, status: :unprocessable_entity }
-  #    end
-  #  end
+    redirect_to user_path(@user)
   end
 
   # PATCH/PUT /tweets/1
@@ -77,6 +63,6 @@ class TweetsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tweet_params
-      params.require(:tweet).permit(:tweet, :user_id)
+      params.require(:tweet).permit(:tweet)
     end
 end

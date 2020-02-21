@@ -1,10 +1,10 @@
 class CreateUsers < ActiveRecord::Migration[5.2]
   def change
-    create_table :users do |t|
-      t.string :pseudo
+    create_table :tweets do |t|
+      t.string :corp
+      t.refenreces :user, null: true, foreign_key: true
 
       t.timestamps
     end
-    add_index :users, :pseudo, unique: true
   end
 end

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>
+  <strong>Pseudo:</strong>
+  <%= @user.pseudo %>
+  
+</h1>
+<h2>
+<tbody>
+  <% @tweets.each do |tweet| %>
+    <tr>
+      <td><%= tweet.tweet %></td>
+      <strong>Tweet:</strong>
+      <%= tweet.inspect %>
+      <td><%= link_to 'Edit', edit_user_path(tweet) %></td>
+      
+    </tr>
+    <br>
+  <% end %></h2>
+</tbody>
+
+<h2>Post a tweet:</h2>
+<%= form_with(model: [ @user, @user.tweets.build ], local: true) do |form| %>
+  <p>
+    <%= form.label :Tweet %><br>
+    <%= form.text_area :text %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+<%= link_to 'Edit profile', edit_user_path(@user) %> |
+<%= link_to 'Logout', users_path %>

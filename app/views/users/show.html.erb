@@ -12,7 +12,8 @@
       <td><%= tweet.tweet %></td>
       <strong>Tweet:</strong>
       <%= tweet.inspect %>
-      <td><%= link_to 'Edit', edit_user_path(tweet) %></td>
+      <td><%= link_to 'Edit', edit_user_tweet_path(@user) %></td>
+      <td><%= link_to 'Delete', [tweet.user, tweet], method: :delete, data: { confirm: 'Are you sure?' } %> %></td>
       
     </tr>
     <br>
@@ -23,7 +24,7 @@
 <%= form_with(model: [ @user, @user.tweets.build ], local: true) do |form| %>
   <p>
     <%= form.label :Tweet %><br>
-    <%= form.text_area :text %>
+    <%= form.text_area :string %>
   </p>
   <p>
     <%= form.submit %>
